@@ -17,6 +17,7 @@
 		<module>shopmail-product</module>
 		<module>renren-fast</module>
 		<module>renren-generator</module>
+		<module>shopmail-common</module>
 	</modules>
 
 </project>

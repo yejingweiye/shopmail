@@ -1,5 +1,6 @@
 package com.example.shopmail.shopmailproduct.entity;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 
@@ -12,7 +13,7 @@ import lombok.Data;
  * 
  * @author yejingwei
  * @email yejingwei@gmail.com
- * @date 2020-09-11 20:35:24
+ * @date 2020-09-12 15:00:37
  */
 @Data
 @TableName("pms_attr_group")
@@ -44,5 +45,8 @@ public class AttrGroupEntity implements Serializable {
 	 * 所属分类id
 	 */
 	private Long catelogId;
+
+	@TableField(exist = false)
+	private Long[] catelogPath;
 
 }

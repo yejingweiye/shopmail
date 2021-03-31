@@ -1,0 +1,15 @@
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+  application:
+    name: shopmail-third-party
+server:
+  port: 30000
+aliyun:
+  oss:
+    endpoint: oss-cn-shenzhen.aliyuncs.com
+    accessKeyId: LTAI4GCyHVAKr6VY3pxoQidM
+    accessKeySecret: 8FTBFvS3z4Av3iRjekIt4UKphgPQR6
+    bucket: shopmail-hello

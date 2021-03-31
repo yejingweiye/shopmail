@@ -20,6 +20,19 @@
 	</properties>
 
 	<dependencies>
+		<!--&lt;!&ndash; https://mvnrepository.com/artifact/com.aliyun.oss/aliyun-sdk-oss &ndash;&gt;-->
+		<!--<dependency>-->
+			<!--<groupId>com.aliyun.oss</groupId>-->
+			<!--<artifactId>aliyun-sdk-oss</artifactId>-->
+			<!--<version>3.10.2</version>-->
+		<!--</dependency>-->
+
+
+		<dependency>
+			<groupId>com.example.shopmail</groupId>
+			<artifactId>shopmail-common</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -40,6 +53,13 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+		<dependency>
+			<groupId>com.aliyun.oss</groupId>
+			<artifactId>aliyun-sdk-oss</artifactId>
+			<version>RELEASE</version>
+		</dependency>
+
+
 	</dependencies>
 
 	<dependencyManagement>

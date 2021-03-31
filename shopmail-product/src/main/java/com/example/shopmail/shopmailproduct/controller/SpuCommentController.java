@@ -3,7 +3,7 @@ package com.example.shopmail.shopmailproduct.controller;
 import java.util.Arrays;
 import java.util.Map;
 
-import org.apache.shiro.authz.annotation.RequiresPermissions;
+//import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -23,7 +23,7 @@ import com.example.common.utils.R;
  *
  * @author yejingwei
  * @email yejingwei@gmail.com
- * @date 2020-09-11 20:35:24
+ * @date 2020-09-12 15:00:37
  */
 @RestController
 @RequestMapping("shopmailproduct/spucomment")
@@ -35,7 +35,7 @@ public class SpuCommentController {
      * 列表
      */
     @RequestMapping("/list")
-    @RequiresPermissions("shopmailproduct:spucomment:list")
+//  @RequiresPermissions("shopmailproduct:spucomment:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = spuCommentService.queryPage(params);
 
@@ -47,7 +47,7 @@ public class SpuCommentController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    @RequiresPermissions("shopmailproduct:spucomment:info")
+    //@RequiresPermissions("shopmailproduct:spucomment:info")
     public R info(@PathVariable("id") Long id){
 		SpuCommentEntity spuComment = spuCommentService.getById(id);
 
@@ -58,7 +58,7 @@ public class SpuCommentController {
      * 保存
      */
     @RequestMapping("/save")
-    @RequiresPermissions("shopmailproduct:spucomment:save")
+    //@RequiresPermissions("shopmailproduct:spucomment:save")
     public R save(@RequestBody SpuCommentEntity spuComment){
 		spuCommentService.save(spuComment);
 
@@ -69,7 +69,7 @@ public class SpuCommentController {
      * 修改
      */
     @RequestMapping("/update")
-    @RequiresPermissions("shopmailproduct:spucomment:update")
+    //@RequiresPermissions("shopmailproduct:spucomment:update")
     public R update(@RequestBody SpuCommentEntity spuComment){
 		spuCommentService.updateById(spuComment);
 
@@ -80,7 +80,7 @@ public class SpuCommentController {
      * 删除
      */
     @RequestMapping("/delete")
-    @RequiresPermissions("shopmailproduct:spucomment:delete")
+    //@RequiresPermissions("shopmailproduct:spucomment:delete")
     public R delete(@RequestBody Long[] ids){
 		spuCommentService.removeByIds(Arrays.asList(ids));
 
